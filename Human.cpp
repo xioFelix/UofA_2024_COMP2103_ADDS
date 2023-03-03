@@ -1,5 +1,5 @@
 #include <iostream>
-#include "human.h"
+#include "Human.h"
 
 Human::Human(std::string name) : name_Get(name) {}
 

@@ -1,7 +1,7 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 
-#include "player.h"
+#include "Player.h"
 
 class Human : public Player {
 public:
@@ -12,4 +12,4 @@ private:
     std::string name_Get;
 };
 
-#endif // HUMAN_H
+#endif

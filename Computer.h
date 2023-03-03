@@ -1,7 +1,7 @@
 #ifndef COMPUTER_H
 #define COMPUTER_H
 
-#include "player.h"
+#include "Player.h"
 
 class Computer : public Player {
 public:
@@ -9,4 +9,4 @@ public:
     std::string getName();
 };
 
-#endif // COMPUTER_H
+#endif

@@ -1,7 +1,7 @@
 #ifndef REFEREE_H
 #define REFEREE_H
 
-#include "player.h"
+#include "Player.h"
 
 class Referee {
 public:
@@ -9,4 +9,4 @@ public:
     Player* refGame(Player* player1, Player* player2);
 };
 
-#endif // REFEREE_H
+#endif
