@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Human.h"
 
-Human::Human(std::string name) : name_Get(name) {}
+Human::Human(std::string name) : nameGet(name) {}
 
 char Human::makeMove() {
     std::cout << "Enter move: ";

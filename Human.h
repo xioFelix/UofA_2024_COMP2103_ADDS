@@ -9,7 +9,7 @@ public:
     char makeMove();
     std::string getName();
 private:
-    std::string name_Get;
+    std::string nameGet;
 };
 
 #endif
