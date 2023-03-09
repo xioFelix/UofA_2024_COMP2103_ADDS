@@ -1,7 +1,7 @@
 #include "Computer.h"
 
-char Computer::makeMove() {
-    return 'R';
+Move *Computer::makeMove() {
+
 }
 
 std::string Computer::getName() {

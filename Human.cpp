@@ -3,13 +3,13 @@
 
 Human::Human(std::string name) : nameGet(name) {}
 
-char Human::makeMove() {
+Move *Human::makeMove() {
     std::cout << "Enter move: ";
-    char move;
+    std::string move;
     std::cin >> move;
-    return move;
+    return Move(makeMove);
 }
 
 std::string Human::getName() {
-    return name_Get;
+    return nameGet;
 }

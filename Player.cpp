@@ -1,13 +1,13 @@
 #include "Player.h"
 
-Player::Player(){}
-
-Player::Player(std::string name) {
-    this->name = name;
+Player::Player(){
+    
 }
 
-char Player::makeMove(){}
+Move *Player::makeMove(){
+    return nullptr;
+}
 
 std::string Player::getName() {
-    return name;
+    return moveName;
 }

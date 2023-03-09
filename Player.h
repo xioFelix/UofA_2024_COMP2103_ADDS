@@ -2,18 +2,18 @@
 #define PLAYER_H
 
 #include <string>
-#include<iostream>
+#include <iostream>
+#include "Move.h"
 
-class Player {
+class Player : public Move{
 public:
     Player();
     Player(std::string name);
+    virtual Move *makeMove( );
     virtual std::string getName();
-    virtual char makeMove();
-    Move *makeMove( );
-    std::string getName( ); 
+
 protected:
-    std::string name;
+    std::string moveName;
 };
 
 #endif
