@@ -55,9 +55,9 @@ Move* moropinzee::Judge(Move* compare) {
       return compare;
     }
   } else if (compare->getid() > id) {
-    if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
+    if ((compare->getid() - id) - (int)(compare->getid() - id) == 0) {
       return compare;
-    } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
+    } else if ((compare->getid() - id) - (int)(compare->getid() - id) == 0) {
       return new moropinzee(temp);
     }
   } else {
