@@ -9,8 +9,8 @@ class moropinzee : public Move {
  private:
  public:
   moropinzee();
-  moropinzee(std::string PlayerName);
-  void setMove(std::string moveName);
+  moropinzee(std::string moveName);
+  void setMove(std::string RPMoveName);
   std::string getName();
   float getid();
   Move* Judge(Move* compare);
