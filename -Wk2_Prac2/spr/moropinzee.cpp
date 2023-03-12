@@ -46,20 +46,20 @@ void moropinzee::setMove(std::string change_) {
 
 string moropinzee::getName() { return NameOfMove; }
 
-int moropinzee::getid() { return id; }
+float moropinzee::getid() { return id; }
 
 Move* moropinzee::WinOrLoss(Move* compare) {
   string temp = NameOfMove;
   if (id > compare->getid()) {
-    if ((id - compare->getid()) % 1 != 0) {
+    if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return new moropinzee(temp);
-    } else if ((id - compare->getid()) % 1 == 0) {
+    } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return compare;
     }
   } else if (compare->getid() > id) {
-    if ((compare->getid() - id) % 1 != 0) {
+    if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return compare;
-    } else if ((compare->getid() - id) % 1 == 0) {
+    } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return new moropinzee(temp);
     }
   } else if (id == compare->getid()) {

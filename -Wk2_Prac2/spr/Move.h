@@ -19,7 +19,7 @@ class Move {
   // of a Move instance, for example "Ninja".  This function
   // exists purely so I can do some tests.  I don't expect
   // you to call it in your code other than while testing.
-  virtual int getid();
+  virtual float getid();
   virtual Move* WinOrLoss(Move* compare);
   ~Move();
 };

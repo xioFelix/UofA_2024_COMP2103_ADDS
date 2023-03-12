@@ -15,7 +15,7 @@ void Move::setMove(std::string change_) { NameOfMove = change_; }
 
 string Move::getName() { return NameOfMove; }
 
-int Move::getid() { return id; }
+float Move::getid() { return id; }
 
 Move* Move::WinOrLoss(Move* compare) {
   if (compare->getid() > this->getid()) {

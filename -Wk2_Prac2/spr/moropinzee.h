@@ -12,7 +12,7 @@ class moropinzee : public Move {
   moropinzee(std::string _name);
   void setMove(std::string change_);
   std::string getName();
-  int getid();
+  float getid();
   Move* WinOrLoss(Move* compare);
   ~moropinzee();
 };
