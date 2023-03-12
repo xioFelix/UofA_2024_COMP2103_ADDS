@@ -12,6 +12,7 @@ moropinzee::moropinzee() {}
 string moropinzee::getName() { return NameOfMove; }
 float moropinzee::getid() { return id; }
 
+//ComputerSet
 moropinzee::moropinzee(std::string moveName) {
   NameOfMove = moveName;
   if (moveName == "Robot") {
@@ -29,6 +30,7 @@ moropinzee::moropinzee(std::string moveName) {
   }
 }
 
+// HumanSet
 void moropinzee::setMove(std::string RPMoveName) {
   NameOfMove = RPMoveName;
   if (RPMoveName == "Robot") {
@@ -42,23 +44,23 @@ void moropinzee::setMove(std::string RPMoveName) {
   } else if (RPMoveName == "Zombie") {
     id = 3;
   } else {
-    id = 1000;
+    id = 100;
   }
 }
 
-Move* moropinzee::Judge(Move* compare) {
+Move* moropinzee::Judge(Move* compared) {
   string temp = NameOfMove;
-  if (id > compare->getid()) {
-    if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
+  if (id > compared->getid()) {
+    if ((id - compared->getid()) - (int)(id - compared->getid()) == 0) {
       return new moropinzee(temp);
-    } else if ((id - compare->getid()) - (int)(id - compare->getid()) != 0) {
-      return compare;
+    } else if ((id - compared->getid()) - (int)(id - compared->getid()) != 0) {
+      return compared;
     }
-  } else if (compare->getid() > id) {
-    if ((compare->getid() - id) - (int)(compare->getid() - id) == 0) {
+  } else if (compared->getid() > id) {
+    if ((compared->getid() - id) - (int)(compared->getid() - id) == 0) {
       return new moropinzee(temp);
-    } else if ((compare->getid() - id) - (int)(compare->getid() - id) != 0) {
-      return compare;
+    } else if ((compared->getid() - id) - (int)(compared->getid() - id) != 0) {
+      return compared;
     }
   } else {
       return nullptr;
