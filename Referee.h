@@ -2,8 +2,9 @@
 #define REFEREE_H
 
 #include "Move.h"
-#include "rps.h"
+#include "Player.h"
 #include "moropinzee.h"
+#include "rps.h"
 
 class Referee {
  public:
