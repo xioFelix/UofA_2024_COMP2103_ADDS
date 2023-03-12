@@ -3,15 +3,13 @@
 #include <iostream>
 
 #include "Move.h"
-#include "Paper.h"
+#include "rps.h"
 #include "Player.h"
-#include "Rock.h"
-#include "Scissors.h"
 #include "moropinzee.h"
 class Computer : public Player {
  private:
-  std::string _name = " ";
-  Move* _move;
+  std::string PlayerName = " ";
+  Move* moveName;
 
  public:
   Computer();

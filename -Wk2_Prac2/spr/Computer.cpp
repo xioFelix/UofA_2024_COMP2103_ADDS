@@ -5,19 +5,17 @@
 #include <iostream>
 
 #include "Move.h"
-#include "Paper.h"
+#include "rps.h"
 #include "Player.h"
-#include "Rock.h"
-#include "Scissors.h"
 #include "moropinzee.h"
 using namespace std;
 
-Computer::Computer() { _name = "Computer"; }
+Computer::Computer() { PlayerName = "Computer"; }
 
 Move* Computer::makeMove() {
-  _move = new Rock;
-  return _move;
+  moveName = new rps("Rock");
+  return moveName;
 }
 
-string Computer::getName() { return _name; }
-Computer::~Computer() { delete _move; }
+string Computer::getName() { return PlayerName; }
+Computer::~Computer() { delete moveName; }

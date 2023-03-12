@@ -8,8 +8,8 @@
 class moropinzee : public Move {
  private:
  public:
-  moropinzee(/* args */);
-  moropinzee(std::string _name);
+  moropinzee();
+  moropinzee(std::string PlayerName);
   void setMove(std::string change_);
   std::string getName();
   float getid();

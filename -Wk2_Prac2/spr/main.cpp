@@ -5,11 +5,9 @@
 #include "Computer.h"
 #include "Human.h"
 #include "Move.h"
-#include "Paper.h"
+#include "rps.h"
 #include "Player.h"
 #include "Referee.h"
-#include "Rock.h"
-#include "Scissors.h"
 #include "moropinzee.h"
 using namespace std;
 

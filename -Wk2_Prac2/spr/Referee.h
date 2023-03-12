@@ -1,10 +1,8 @@
-#ifndef RE_H
-#define RE_H
+#ifndef REFEREE_H
+#define REFEREE_H
+
 #include "Move.h"
-#include "Paper.h"
-#include "Player.h"
-#include "Rock.h"
-#include "Scissors.h"
+#include "rps.h"
 #include "moropinzee.h"
 
 class Referee {

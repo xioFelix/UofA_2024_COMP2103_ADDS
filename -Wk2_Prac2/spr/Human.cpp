@@ -5,41 +5,40 @@
 #include <iostream>
 
 #include "Move.h"
-#include "Paper.h"
+#include "rps.h"
 #include "Player.h"
-#include "Rock.h"
-#include "Scissors.h"
+
 #include "moropinzee.h"
 using namespace std;
-Human::Human() { _name = "Human"; }
-Human::Human(string Name) { _name = Name; };
+Human::Human() { PlayerName = "Human"; }
+Human::Human(string Name) { PlayerName = Name; };
 Move* Human::makeMove() {
   string temp;
   cout << "Enter move: ";
   cin >> temp;
   if (temp == "Rock") {
-    _move = new Rock;
+    moveName = new rps("Rock");
   } else if (temp == "Paper") {
-    return new Paper;
+    return new rps("Paper");
   } else if (temp == "Scissors") {
-    _move = new Scissors;
+    moveName = new rps("Scissors");
   }
   // create Moropinzee type
   else if (temp == "Robot") {
-    _move = new moropinzee("Robot");
+    moveName = new moropinzee("Robot");
   } else if (temp == "Pirate") {
-    _move = new moropinzee("Pirate");
+    moveName = new moropinzee("Pirate");
   } else if (temp == "Ninja") {
-    _move = new moropinzee("Ninja");
+    moveName = new moropinzee("Ninja");
   } else if (temp == "Monkey") {
     return new moropinzee("Monkey");
   } else if (temp == "Zombie") {
-    _move = new moropinzee("Zombie");
+    moveName = new moropinzee("Zombie");
   } else {
     return nullptr;
   }
-  return _move;
+  return moveName;
 }
 
-string Human::getName() { return _name; }
-Human::~Human() { delete _move; }
+string Human::getName() { return PlayerName; }
+Human::~Human() { delete moveName; }
