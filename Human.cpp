@@ -14,7 +14,6 @@ Human::Human() { PlayerName = "Human"; }
 Human::Human(string Name) { PlayerName = Name; };
 Move* Human::makeMove() {
   string temp;
-  cout << "Enter move: ";
   cin >> temp;
   if (temp == "Rock") {
     moveName = new rps("Rock");
