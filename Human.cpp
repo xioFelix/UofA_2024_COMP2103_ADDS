@@ -19,7 +19,7 @@ Move* Human::makeMove() {
   if (temp == "Rock") {
     moveName = new rps("Rock");
   } else if (temp == "Paper") {
-    return new rps("Paper");
+    moveName = new rps("Paper");
   } else if (temp == "Scissors") {
     moveName = new rps("Scissors");
   }
