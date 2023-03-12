@@ -3,10 +3,8 @@
 #include <iostream>
 
 #include "Move.h"
-#include "Paper.h"
 #include "Player.h"
-#include "Rock.h"
-#include "Scissors.h"
+#include "rps.h"
 #include "moropinzee.h"
 Referee::Referee() {}
 
