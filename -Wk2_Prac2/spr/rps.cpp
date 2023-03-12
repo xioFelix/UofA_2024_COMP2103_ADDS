@@ -43,22 +43,13 @@ void rps::setMove(std::string RPMoveName) {
 Move* rps::Judge(Move* compare) {
   string temp = NameOfMove;
   if (id > compare->getid()) {
-    if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
-      return new rps(temp);
-    } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return compare;
     }
-  } else if (compare->getid() > id) {
-    if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
-      return compare;
-    } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
+  else if (compare->getid() > id){
       return new rps(temp);
     }
-  } else if (id == compare->getid()) {
+  else if (id == compare->getid()) {
     return nullptr;
   }
 
-  return nullptr;
-}
-
-rps::~rps() {}
+rps::~rps(){}
