@@ -9,7 +9,7 @@ class Move {
 
  public:
   Move();
-  Move(std::string _input);
+  Move(std::string input);
   virtual void setMove(std::string moveName);
   virtual std::string getName();
   virtual float getid();
