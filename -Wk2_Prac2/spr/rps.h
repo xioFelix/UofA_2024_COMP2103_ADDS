@@ -8,9 +8,9 @@
 class rps : public Move {
  private:
  public:
-  rps(/* args */);
+  rps();
   rps(std::string moveName);
-  void setMove(std::string change_);
+  void setMove(std::string RPMoveName);
   std::string getName();
   float getid();
   Move* WinOrLoss(Move* compare);

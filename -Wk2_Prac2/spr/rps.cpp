@@ -29,17 +29,17 @@ rps::rps(std::string moveName) {
   }
 }
 
-void rps::setMove(std::string change_) {
-  NameOfMove = change_;
-  if (change_ == "Robot") {
+void rps::setMove(std::string RPMoveName) {
+  NameOfMove = RPMoveName;
+  if (RPMoveName == "Robot") {
     id = 1;
-  } else if (change_ == "Pirate") {
+  } else if (RPMoveName == "Pirate") {
     id = 1.5;
-  } else if (change_ == "Ninja") {
+  } else if (RPMoveName == "Ninja") {
     id = 2;
-  } else if (change_ == "Monkey") {
+  } else if (RPMoveName == "Monkey") {
     id = 2.5;
-  } else if (change_ == "Zombie") {
+  } else if (RPMoveName == "Zombie") {
     id = 3;
   } else {
     id = 10;
