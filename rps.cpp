@@ -44,9 +44,9 @@ Move* rps::Judge(Move* compared) {
   string temp = NameOfMove;
   if (id == 4) {
     if (compared->getid() == 5) {
-      return new rps(temp);
+        return compared;
     } else if (compared->getid() == 6) {
-      return compared;
+        return new rps(temp);
     }
   } else if (id == 5) {
     if (compared->getid() == 4) {
