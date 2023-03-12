@@ -10,9 +10,9 @@ Move::~Move() {}
 
 Move::Move() { NameOfMove = " "; }
 
-Move::Move(string _input) : NameOfMove(_input) {}
+Move::Move(string input) : NameOfMove(input) {}
 
-void Move::setMove(std::string change_) { NameOfMove = change_; }
+void Move::setMove(std::string RPMoveName) { NameOfMove = RPMoveName; }
 
 string Move::getName() { return NameOfMove; }
 
