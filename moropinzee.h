@@ -10,7 +10,7 @@ class moropinzee : public Move {
  public:
   moropinzee();
   moropinzee(std::string PlayerName);
-  void setMove(std::string change_);
+  void setMove(std::string moveName);
   std::string getName();
   float getid();
   Move* Judge(Move* compare);
