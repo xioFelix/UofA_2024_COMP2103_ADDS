@@ -5,7 +5,7 @@
 class Move {
  protected:
   std::string NameOfMove = " ";
-  int id;
+  float id;
 
  public:
   Move(/* args */);
