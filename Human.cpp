@@ -23,7 +23,7 @@ Move* Human::makeMove() {
   } else if (temp == "Scissors") {
     moveName = new rps("Scissors");
   }
-  // create Moropinzee type
+
   else if (temp == "Robot") {
     moveName = new moropinzee("Robot");
   } else if (temp == "Pirate") {
