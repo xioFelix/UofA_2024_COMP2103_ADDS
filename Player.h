@@ -1,19 +1,21 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef Player_H
+#define Player_H
+#include <string.h>
 
-#include <string>
 #include <iostream>
+
 #include "Move.h"
+#include "rps.h"
+#include "moropinzee.h"
+class Player {
+ protected:
+ public:
+  Player();
 
-class Player : public Move{
-public:
-    Player();
-    Player(std::string name);
-    virtual Move *makeMove( );
-    virtual std::string getName();
-
-protected:
-    std::string moveName;
+  virtual Move* makeMove() = 0;
+  virtual std::string
+  getName() = 0;
+  ~Player();
 };
 
 #endif

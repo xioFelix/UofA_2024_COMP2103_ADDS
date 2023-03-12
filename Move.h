@@ -1,15 +1,20 @@
 #ifndef MOVE_H
 #define MOVE_H
-
 #include <iostream>
-#include <string>
 
-    class Move{
-    public:
-    Move();
-    std::string getName();
+class Move {
+ protected:
+  std::string NameOfMove = " ";
+  float id;
 
-    private:
-    std::string moveName;
-    };
+ public:
+  Move();
+  Move(std::string _input);
+  virtual void setMove(std::string change_);
+  virtual std::string getName();
+  virtual float getid();
+  virtual Move* Judge(Move* compare);
+  ~Move();
+};
+
 #endif

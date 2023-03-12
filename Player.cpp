@@ -1,13 +1,14 @@
 #include "Player.h"
 
-Player::Player(){
-    
-}
+#include <iostream>
+#include <iostream>
 
-Move *Player::makeMove(){
-    return nullptr;
-}
+#include "Move.h"
+#include "rps.h"
+#include "moropinzee.h"
 
-std::string Player::getName() {
-    return moveName;
-}
+using namespace std;
+
+Player::Player() {}
+
+Player::~Player() {}
