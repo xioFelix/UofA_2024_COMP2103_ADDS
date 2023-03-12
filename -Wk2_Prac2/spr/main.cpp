@@ -20,7 +20,7 @@ int main() {
   Player *winner;
 
   winner = r->refGame(a1, a2);
-  cout << "first run\n";
+  cout << "First run\n";
   if (winner != nullptr) {
     cout << winner->getName() << " win!" << endl;
   } else if (winner == nullptr) {
