@@ -1,5 +1,5 @@
-#ifndef MOR_H
-#define MOR_H
+#ifndef RPS_H
+#define RPS_H
 
 #include <iostream>
 
