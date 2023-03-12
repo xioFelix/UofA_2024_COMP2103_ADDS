@@ -18,9 +18,9 @@ string Move::getName() { return NameOfMove; }
 
 float Move::getid() { return id; }
 
-Move* Move::Judge(Move* compare) {
-  if (compare->getid() > this->getid()) {
-    return compare;
+Move* Move::Judge(Move* compared) {
+  if (compared->getid() > this->getid()) {
+    return compared;
   }
   return this;
 }
