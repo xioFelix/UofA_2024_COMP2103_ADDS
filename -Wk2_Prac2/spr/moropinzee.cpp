@@ -42,7 +42,7 @@ void moropinzee::setMove(std::string RPMoveName) {
   } else if (RPMoveName == "Zombie") {
     id = 3;
   } else {
-    id = 10;
+    id = -1;
   }
 }
 
@@ -60,11 +60,8 @@ Move* moropinzee::Judge(Move* compare) {
     } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return new moropinzee(temp);
     }
-  } else if (id == compare->getid()) {
-    return nullptr;
+  } else {
+      return nullptr;
   }
-
-  return nullptr;
 }
-
 moropinzee::~moropinzee() {}

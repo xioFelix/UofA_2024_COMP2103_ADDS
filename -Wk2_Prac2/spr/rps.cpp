@@ -12,7 +12,7 @@ rps::rps() {}
 string rps::getName() { return NameOfMove; }
 float rps::getid() { return id; }
 
-//Computer
+// Computer
 rps::rps(std::string moveName) {
   NameOfMove = moveName;
   if (moveName == "Rock") {
@@ -26,7 +26,7 @@ rps::rps(std::string moveName) {
   }
 }
 
-//Human
+// Human
 void rps::setMove(std::string RPMoveName) {
   NameOfMove = RPMoveName;
   if (RPMoveName == "Rock") {
@@ -42,29 +42,26 @@ void rps::setMove(std::string RPMoveName) {
 
 Move* rps::Judge(Move* compared) {
   string temp = NameOfMove;
-  if ( id == 1 ) {
-      if (compared->getid() == 2 ){
-        return new rps(temp);
-      }
-      else if (compared->getid() == 3){
-        return compared;
-      }
+  if (id == 1) {
+    if (compared->getid() == 2) {
+      return new rps(temp);
+    } else if (compared->getid() == 3) {
+      return compared;
     }
-  else if ( id == 2 ){
-      if (compared->getid() == 1 ){
-        return new rps(temp);
-      }
-      else if (compared->getid() == 3){
-        return compared;
-      }
+  } else if (id == 2) {
+    if (compared->getid() == 1) {
+      return new rps(temp);
+    } else if (compared->getid() == 3) {
+      return compared;
     }
-  else if ( id == 3 ){
-      if (compared->getid() == 2 ){
-        return new rps(temp);
-      }
-      else if (compared->getid() == 1){
-        return compared;
-      }
+  } else if (id == 3) {
+    if (compared->getid() == 2) {
+      return new rps(temp);
+    } else if (compared->getid() == 1) {
+      return compared;
     }
-  else {return nullptr;}
+  } else {
+    return nullptr;
+  }
 }
+rps::~rps() {}
