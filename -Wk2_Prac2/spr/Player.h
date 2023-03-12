@@ -14,12 +14,9 @@ class Player {
  public:
   Player();
 
-  virtual Move* makeMove() = 0;  // return type is changed, the return type of
-                                 // this is a hint to the polymorphism
+  virtual Move* makeMove() = 0;
   virtual std::string
-  getName() = 0;  // returns the name of the Player as a string -
-                  // this should match what the user typed in
-
+  getName() = 0;
   ~Player();
 };
 

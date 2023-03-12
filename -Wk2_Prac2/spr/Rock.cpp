@@ -4,9 +4,8 @@
 
 #include <iostream>
 
-// #include "Computer.h"
-// #include "Human.h"
 #include "Move.h"
+
 using namespace std;
 
 Rock::Rock() {
@@ -20,7 +19,7 @@ void Rock::setMove(std::string change_) {
 
 string Rock::getName() { return NameOfMove; }
 
-int Rock::getid() { return id; }
+float Rock::getid() { return id; }
 
 Move* Rock::WinOrLoss(Move* compare) {
   if (compare->getid() == 0) {

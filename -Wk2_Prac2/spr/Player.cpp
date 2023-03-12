@@ -8,6 +8,7 @@
 #include "Rock.h"
 #include "Scissors.h"
 #include "moropinzee.h"
+
 using namespace std;
 
 Player::Player() {}

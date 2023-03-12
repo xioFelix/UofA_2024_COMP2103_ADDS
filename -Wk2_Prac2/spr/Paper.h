@@ -6,10 +6,10 @@
 class Paper : public Move {
  private:
  public:
-  Paper(/* args */);
+  Paper();
   void setMove(std::string change_);
   std::string getName();
-  int getid();
+  float getid();
   Move* WinOrLoss(Move* compare);
   ~Paper();
 };

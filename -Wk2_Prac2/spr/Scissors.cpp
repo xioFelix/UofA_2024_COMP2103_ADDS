@@ -4,8 +4,6 @@
 
 #include <iostream>
 
-// #include "Computer.h"
-// #include "Human.h"
 #include "Move.h"
 using namespace std;
 
@@ -20,7 +18,7 @@ void Scissors::setMove(std::string change_) {
 
 string Scissors::getName() { return NameOfMove; }
 
-int Scissors::getid() { return id; }
+float Scissors::getid() { return id; }
 
 Move* Scissors::WinOrLoss(Move* compare) {
   if (compare->getid() == 0) {

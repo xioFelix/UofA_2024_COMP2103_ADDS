@@ -4,8 +4,6 @@
 
 #include <iostream>
 
-// #include "Computer.h"
-// #include "Human.h"
 #include "Move.h"
 using namespace std;
 

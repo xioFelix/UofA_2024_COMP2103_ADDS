@@ -6,6 +6,7 @@
 #include "Rock.h"
 #include "Scissors.h"
 #include "moropinzee.h"
+
 class Referee {
  public:
   Referee();

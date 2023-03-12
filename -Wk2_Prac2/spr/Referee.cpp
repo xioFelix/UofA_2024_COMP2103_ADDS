@@ -8,9 +8,7 @@
 #include "Rock.h"
 #include "Scissors.h"
 #include "moropinzee.h"
-
 Referee::Referee() {}
-// Referee::~Referee() {}
 
 Player* Referee::refGame(Player* player1, Player* player2) {
   Move* m1 = new Move;
@@ -32,25 +30,3 @@ Player* Referee::refGame(Player* player1, Player* player2) {
 
   return nullptr;
 }
-
-// Player* Referee::refGame(Player* player1, Player* player2) {
-//   Move* m1 = new Move;
-//   Move* m2 = new Move;
-//   m1 = player1->makeMove();
-//   m2 = player2->makeMove();
-//   Move check;
-//   Move* winningMove = new Move;
-//   winningMove = check.winner(m1, m2);
-//   if (winningMove == nullptr) {
-//     delete m1, m2, winningMove;
-//     return nullptr;
-//   } else if (winningMove->getName() == m2->getName()) {
-//     delete m1, m2, winningMove;
-//     return player2;
-//   } else if (winningMove->getName() == m1->getName()) {
-//     delete m1, m2, winningMove;
-//     return player1;
-//   }
-
-//   return nullptr;
-// }
