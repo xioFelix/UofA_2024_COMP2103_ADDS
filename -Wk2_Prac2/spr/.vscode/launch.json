@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/xiofe/Desktop/spr",
-      "program": "c:/Users/xiofe/Desktop/spr/build/Debug/outDebug",
+      "cwd": "f:/Code/Adelaide Uni/2023/s1/ADDS2103/-Wk2_Prac2/spr",
+      "program": "f:/Code/Adelaide Uni/2023/s1/ADDS2103/-Wk2_Prac2/spr/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
