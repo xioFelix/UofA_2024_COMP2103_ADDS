@@ -25,7 +25,7 @@ moropinzee::moropinzee(std::string moveName) {
   } else if (moveName == "Zombie") {
     id = 3;
   } else {
-    id = 10;
+    id = 100;
   }
 }
 
@@ -42,7 +42,7 @@ void moropinzee::setMove(std::string RPMoveName) {
   } else if (RPMoveName == "Zombie") {
     id = 3;
   } else {
-    id = -1;
+    id = 1000;
   }
 }
 
