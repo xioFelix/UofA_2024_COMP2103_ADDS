@@ -14,17 +14,14 @@ float rps::getid() { return id; }
 
 rps::rps(std::string moveName) {
   NameOfMove = moveName;
-  if (moveName == "Robot") {
+  if (moveName == "Rock") {
     id = 1;
-  } else if (moveName == "Pirate") {
+  } else if (moveName == "Paper") {
     id = 1.5;
-  } else if (moveName == "Ninja") {
+  } else if (moveName == "Scissor") {
     id = 2;
-  } else if (moveName == "Monkey") {
-    id = 2.5;
-  } else if (moveName == "Zombie") {
-    id = 3;
-  } else {
+  }
+    else {
     id = 10;
   }
 }
