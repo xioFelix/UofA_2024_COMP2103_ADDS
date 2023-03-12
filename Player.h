@@ -5,16 +5,15 @@
 #include <iostream>
 
 #include "Move.h"
-#include "rps.h"
 #include "moropinzee.h"
+#include "rps.h"
 class Player {
  protected:
  public:
   Player();
 
   virtual Move* makeMove() = 0;
-  virtual std::string
-  getName() = 0;
+  virtual std::string getName() = 0;
   ~Player();
 };
 

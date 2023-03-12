@@ -4,8 +4,8 @@
 
 #include "Move.h"
 #include "Player.h"
-#include "rps.h"
 #include "moropinzee.h"
+#include "rps.h"
 Referee::Referee() {}
 
 Player* Referee::refGame(Player* player1, Player* player2) {
