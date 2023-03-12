@@ -13,7 +13,7 @@ using namespace std;
 Computer::Computer() { PlayerName = "Computer"; }
 
 Move* Computer::makeMove() {
-  moveName = new rps("Paper");
+  moveName = new rps("Rock");
   return moveName;
 }
 
