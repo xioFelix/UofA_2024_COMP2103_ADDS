@@ -8,11 +8,11 @@
 
 using namespace std;
 
-rps::rps() {}
-string rps::getName() { return NameOfMove; }
-float rps::getid() { return id; }
+moropinzee::moropinzee() {}
+string moropinzee::getName() { return NameOfMove; }
+float moropinzee::getid() { return id; }
 
-rps::rps(std::string _name) {
+moropinzee::moropinzee(std::string _name) {
   NameOfMove = _name;
   if (_name == "Robot") {
     id = 1;
@@ -29,7 +29,7 @@ rps::rps(std::string _name) {
   }
 }
 
-void rps::setMove(std::string change_) {
+void moropinzee::setMove(std::string change_) {
   NameOfMove = change_;
   if (change_ == "Robot") {
     id = 1;
@@ -46,11 +46,11 @@ void rps::setMove(std::string change_) {
   }
 }
 
-Move* rps::WinOrLoss(Move* compare) {
+Move* moropinzee::WinOrLoss(Move* compare) {
   string temp = NameOfMove;
   if (id > compare->getid()) {
     if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
-      return new rps(temp);
+      return new moropinzee(temp);
     } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return compare;
     }
@@ -58,7 +58,7 @@ Move* rps::WinOrLoss(Move* compare) {
     if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
       return compare;
     } else if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {
-      return new rps(temp);
+      return new moropinzee(temp);
     }
   } else if (id == compare->getid()) {
     return nullptr;
@@ -67,4 +67,4 @@ Move* rps::WinOrLoss(Move* compare) {
   return nullptr;
 }
 
-rps::~rps() {}
+moropinzee::~moropinzee() {}

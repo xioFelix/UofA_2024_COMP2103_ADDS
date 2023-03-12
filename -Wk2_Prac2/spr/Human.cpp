@@ -26,15 +26,15 @@ Move* Human::makeMove() {
   }
   // create Moropinzee type
   else if (temp == "Robot") {
-    _move = new rps("Robot");
+    _move = new moropinzee("Robot");
   } else if (temp == "Pirate") {
-    _move = new rps("Pirate");
+    _move = new moropinzee("Pirate");
   } else if (temp == "Ninja") {
-    _move = new rps("Ninja");
+    _move = new moropinzee("Ninja");
   } else if (temp == "Monkey") {
-    return new rps("Monkey");
+    return new moropinzee("Monkey");
   } else if (temp == "Zombie") {
-    _move = new rps("Zombie");
+    _move = new moropinzee("Zombie");
   } else {
     return nullptr;
   }

@@ -5,16 +5,16 @@
 
 #include "Move.h"
 
-class rps : public Move {
+class moropinzee : public Move {
  private:
  public:
-  rps(/* args */);
-  rps(std::string _name);
+  moropinzee(/* args */);
+  moropinzee(std::string _name);
   void setMove(std::string change_);
   std::string getName();
   float getid();
   Move* WinOrLoss(Move* compare);
-  ~rps();
+  ~moropinzee();
 };
 
 #endif
