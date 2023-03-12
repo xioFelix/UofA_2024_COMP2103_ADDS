@@ -4,12 +4,13 @@
 
 #include <iostream>
 
-// #include "Computer.h"
-// #include "Human.h"
 #include "Move.h"
+
 using namespace std;
 
 moropinzee::moropinzee() {}
+string moropinzee::getName() { return NameOfMove; }
+float moropinzee::getid() { return id; }
 
 moropinzee::moropinzee(std::string _name) {
   NameOfMove = _name;
@@ -27,6 +28,7 @@ moropinzee::moropinzee(std::string _name) {
     id = 10;
   }
 }
+
 void moropinzee::setMove(std::string change_) {
   NameOfMove = change_;
   if (change_ == "Robot") {
@@ -43,10 +45,6 @@ void moropinzee::setMove(std::string change_) {
     id = 10;
   }
 }
-
-string moropinzee::getName() { return NameOfMove; }
-
-float moropinzee::getid() { return id; }
 
 Move* moropinzee::WinOrLoss(Move* compare) {
   string temp = NameOfMove;
