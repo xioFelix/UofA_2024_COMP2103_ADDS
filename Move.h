@@ -10,7 +10,7 @@ class Move {
  public:
   Move();
   Move(std::string _input);
-  virtual void setMove(std::string change_);
+  virtual void setMove(std::string moveName);
   virtual std::string getName();
   virtual float getid();
   virtual Move* Judge(Move* compare);
