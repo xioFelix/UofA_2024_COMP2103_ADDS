@@ -9,7 +9,7 @@ class rps : public Move {
  private:
  public:
   rps(/* args */);
-  rps(std::string _name);
+  rps(std::string moveName);
   void setMove(std::string change_);
   std::string getName();
   float getid();

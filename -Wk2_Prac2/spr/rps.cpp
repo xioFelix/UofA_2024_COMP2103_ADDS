@@ -1,4 +1,4 @@
-#include "moropinzee.h"
+#include "rps.h"
 
 #include <string.h>
 
@@ -12,17 +12,17 @@ rps::rps() {}
 string rps::getName() { return NameOfMove; }
 float rps::getid() { return id; }
 
-rps::rps(std::string _name) {
-  NameOfMove = _name;
-  if (_name == "Robot") {
+rps::rps(std::string moveName) {
+  NameOfMove = moveName;
+  if (moveName == "Robot") {
     id = 1;
-  } else if (_name == "Pirate") {
+  } else if (moveName == "Pirate") {
     id = 1.5;
-  } else if (_name == "Ninja") {
+  } else if (moveName == "Ninja") {
     id = 2;
-  } else if (_name == "Monkey") {
+  } else if (moveName == "Monkey") {
     id = 2.5;
-  } else if (_name == "Zombie") {
+  } else if (moveName == "Zombie") {
     id = 3;
   } else {
     id = 10;
