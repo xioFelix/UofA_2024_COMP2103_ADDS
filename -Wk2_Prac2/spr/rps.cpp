@@ -51,8 +51,20 @@ Move* rps::Judge(Move* compared) {
       }
     }
   else if ( id == 2 ){
-      return new rps(temp);
+      if (compared->getid() == 1 ){
+        return new rps(temp);
+      }
+      else if (compared->getid() == 3){
+        return compared;
+      }
     }
-  else if (id == compared->getid()) {
-    return nullptr;
-  }
+  else if ( id == 3 ){
+      if (compared->getid() == 2 ){
+        return new rps(temp);
+      }
+      else if (compared->getid() == 1){
+        return compared;
+      }
+    }
+    else if (id == compared->getid()) {return nullptr;}
+}
