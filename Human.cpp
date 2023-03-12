@@ -41,4 +41,4 @@ Move* Human::makeMove() {
 }
 
 string Human::getName() { return PlayerName; }
-Human::~Human() { delete moveName; }
+// Human::~Human() { delete moveName; }

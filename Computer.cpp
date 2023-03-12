@@ -18,4 +18,4 @@ Move* Computer::makeMove() {
 }
 
 string Computer::getName() { return PlayerName; }
-Computer::~Computer() { delete moveName; }
+// Computer::~Computer() { delete moveName; }

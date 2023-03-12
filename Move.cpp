@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Move::~Move() {}
+// Move::~Move() {}
 
 Move::Move() { NameOfMove = " "; }
 

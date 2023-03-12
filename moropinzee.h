@@ -14,7 +14,7 @@ class moropinzee : public Move {
   std::string getName();
   float getid();
   Move* Judge(Move* compare);
-  ~moropinzee();
+  // ~moropinzee();
 };
 
 #endif

@@ -64,4 +64,4 @@ Move* rps::Judge(Move* compared) {
     return nullptr;
   }
 }
-rps::~rps() {}
+// rps::~rps() {}

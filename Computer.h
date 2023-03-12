@@ -15,7 +15,7 @@ class Computer : public Player {
   Computer();
   Move* makeMove();
   std::string getName();
-  ~Computer();
+  // ~Computer();
 };
 
 #endif

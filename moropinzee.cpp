@@ -64,4 +64,4 @@ Move* moropinzee::Judge(Move* compare) {
       return nullptr;
   }
 }
-moropinzee::~moropinzee() {}
+// moropinzee::~moropinzee() {}

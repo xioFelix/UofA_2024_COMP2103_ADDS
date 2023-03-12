@@ -14,7 +14,7 @@ class rps : public Move {
   std::string getName();
   float getid();
   Move* Judge(Move* compare);
-  ~rps();
+  // ~rps();
 };
 
 #endif

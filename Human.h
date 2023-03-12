@@ -18,7 +18,7 @@ class Human : public Player {
   Human(std::string Name);
   Move* makeMove();
   std::string getName();
-  ~Human();
+  // ~Human();
 };
 
 #endif
