@@ -12,7 +12,7 @@ rps::rps() {}
 string rps::getName() { return NameOfMove; }
 float rps::getid() { return id; }
 
-// Computer
+// ComputerSet
 rps::rps(std::string moveName) {
   NameOfMove = moveName;
   if (moveName == "Rock") {
@@ -26,7 +26,7 @@ rps::rps(std::string moveName) {
   }
 }
 
-// Human
+// HumanSet
 void rps::setMove(std::string RPMoveName) {
   NameOfMove = RPMoveName;
   if (RPMoveName == "Rock") {
