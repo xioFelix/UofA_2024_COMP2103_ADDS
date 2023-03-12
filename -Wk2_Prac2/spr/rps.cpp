@@ -22,7 +22,7 @@ rps::rps(std::string moveName) {
   } else if (moveName == "Paper") {
     id = 3;
   } else {
-    id = 10;
+    id = -1;
   }
 }
 
@@ -36,7 +36,7 @@ void rps::setMove(std::string RPMoveName) {
   } else if (RPMoveName == "Paper") {
     id = 3;
   } else {
-    id = 10;
+    id = -1;
   }
 }
 
@@ -66,5 +66,5 @@ Move* rps::Judge(Move* compared) {
         return compared;
       }
     }
-    else if (id == compared->getid()) {return nullptr;}
+  else {return nullptr;}
 }
