@@ -14,7 +14,7 @@ Player* Referee::refGame(Player* player1, Player* player2) {
   m1 = player1->makeMove();
   m2 = player2->makeMove();
   Move* winner = new Move;
-  winner = m1->WinOrLoss(m2);
+  winner = m1->Judge(m2);
   if (winner == nullptr) {
     delete m1, m2, winner;
     return nullptr;

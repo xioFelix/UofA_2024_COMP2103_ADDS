@@ -40,7 +40,7 @@ void rps::setMove(std::string RPMoveName) {
   }
 }
 
-Move* rps::WinOrLoss(Move* compare) {
+Move* rps::Judge(Move* compare) {
   string temp = NameOfMove;
   if (id > compare->getid()) {
     if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {

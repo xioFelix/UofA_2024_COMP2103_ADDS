@@ -18,7 +18,7 @@ string Move::getName() { return NameOfMove; }
 
 float Move::getid() { return id; }
 
-Move* Move::WinOrLoss(Move* compare) {
+Move* Move::Judge(Move* compare) {
   if (compare->getid() > this->getid()) {
     return compare;
   }

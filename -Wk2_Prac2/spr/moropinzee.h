@@ -13,7 +13,7 @@ class moropinzee : public Move {
   void setMove(std::string change_);
   std::string getName();
   float getid();
-  Move* WinOrLoss(Move* compare);
+  Move* Judge(Move* compare);
   ~moropinzee();
 };
 

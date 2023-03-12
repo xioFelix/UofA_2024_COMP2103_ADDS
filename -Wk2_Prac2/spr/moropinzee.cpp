@@ -46,7 +46,7 @@ void moropinzee::setMove(std::string RPMoveName) {
   }
 }
 
-Move* moropinzee::WinOrLoss(Move* compare) {
+Move* moropinzee::Judge(Move* compare) {
   string temp = NameOfMove;
   if (id > compare->getid()) {
     if ((id - compare->getid()) - (int)(id - compare->getid()) == 0) {

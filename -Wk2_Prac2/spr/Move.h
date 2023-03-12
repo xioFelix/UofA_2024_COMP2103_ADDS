@@ -13,7 +13,7 @@ class Move {
   virtual void setMove(std::string change_);
   virtual std::string getName();
   virtual float getid();
-  virtual Move* WinOrLoss(Move* compare);
+  virtual Move* Judge(Move* compare);
   ~Move();
 };
 
