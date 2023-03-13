@@ -41,3 +41,4 @@ Move* Human::makeMove() {
 
 string Human::getName() { return PlayerName; }
 // Human::~Human() { delete moveName; }
+//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)

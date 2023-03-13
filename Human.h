@@ -22,3 +22,4 @@ class Human : public Player {
 };
 
 #endif
+//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
