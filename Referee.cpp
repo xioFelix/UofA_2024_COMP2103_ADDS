@@ -18,6 +18,7 @@ Player* Referee::refGame(Player* player1, Player* player2) {
   if (winner->getName() == m2->getName()) {
     // delete m1, m2, winner;
     return player2;
+
   } else if (winner->getName() == m1->getName()) {
     // delete m1, m2, winner;
     return player1;
