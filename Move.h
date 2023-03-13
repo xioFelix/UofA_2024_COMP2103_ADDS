@@ -14,7 +14,7 @@ class Move {
   virtual std::string getName();
   virtual float getid();
   virtual Move* Judge(Move* compare);
-  // ~Move();
+  ~Move();
 };
 
 #endif
