@@ -15,9 +15,10 @@ Player* Referee::refGame(Player* player1, Player* player2) {
   m2 = player2->makeMove();
   Move* winner = new Move;
   winner = m1->Judge(m2);
-  if (winner == nullptr) {
-    return nullptr;
-  } else if (winner->getName() == m2->getName()) {
+  // if (winner == nullptr) {
+  //   return nullptr;
+  // } else 
+  if (winner->getName() == m2->getName()) {
     return player2;
   } else if (winner->getName() == m1->getName()) {
     return player1;
