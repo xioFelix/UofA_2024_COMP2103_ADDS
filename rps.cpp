@@ -63,6 +63,7 @@ Move* rps::Judge(Move* compared) {
   } else {
     return nullptr;
   }
+    return nullptr;
 }
 // rps::~rps() {}
 //Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
