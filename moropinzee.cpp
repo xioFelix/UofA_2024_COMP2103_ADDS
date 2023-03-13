@@ -12,7 +12,7 @@ moropinzee::moropinzee() {}
 string moropinzee::getName() { return NameOfMove; }
 float moropinzee::getid() { return id; }
 
-//ComputerSet
+// ComputerSet
 moropinzee::moropinzee(std::string moveName) {
   NameOfMove = moveName;
   if (moveName == "Robot") {
@@ -63,8 +63,8 @@ Move* moropinzee::Judge(Move* compared) {
       return compared;
     }
   } else {
-      return nullptr;
+    return nullptr;
   }
 }
 // moropinzee::~moropinzee() {}
-//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
+// Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)

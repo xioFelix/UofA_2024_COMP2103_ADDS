@@ -15,15 +15,17 @@ Player* Referee::refGame(Player* player1, Player* player2) {
   m2 = player2->makeMove();
   Move* winner = new Move;
   winner = m1->Judge(m2);
-  if (winner->getName() == m2->getName()) {
+  if (winner == nullptr) {
+    // delete m1, m2, winner;
+    return nullptr;
+  } else if (winner->getName() == m2->getName()) {
     // delete m1, m2, winner;
     return player2;
   } else if (winner->getName() == m1->getName()) {
     // delete m1, m2, winner;
     return player1;
   }
-  else {
+
   return nullptr;
 }
-}
-//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
+// Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)

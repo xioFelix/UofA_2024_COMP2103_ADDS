@@ -24,4 +24,4 @@ Move* Move::Judge(Move* compared) {
   }
   return this;
 }
-//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
+// Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)

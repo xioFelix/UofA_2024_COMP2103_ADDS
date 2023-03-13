@@ -3,9 +3,9 @@
 #include <iostream>
 
 #include "Move.h"
-#include "rps.h"
 #include "Player.h"
 #include "moropinzee.h"
+#include "rps.h"
 
 class Human : public Player {
  private:
@@ -22,4 +22,4 @@ class Human : public Player {
 };
 
 #endif
-//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
+// Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)

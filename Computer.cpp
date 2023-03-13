@@ -5,9 +5,9 @@
 #include <iostream>
 
 #include "Move.h"
-#include "rps.h"
 #include "Player.h"
 #include "moropinzee.h"
+#include "rps.h"
 using namespace std;
 
 Computer::Computer() { PlayerName = "Computer"; }
@@ -19,4 +19,4 @@ Move* Computer::makeMove() {
 
 string Computer::getName() { return PlayerName; }
 // Computer::~Computer() { delete moveName; }
-//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
+// Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)

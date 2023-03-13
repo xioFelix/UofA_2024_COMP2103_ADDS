@@ -5,10 +5,9 @@
 #include <iostream>
 
 #include "Move.h"
-#include "rps.h"
 #include "Player.h"
-
 #include "moropinzee.h"
+#include "rps.h"
 using namespace std;
 Human::Human() { PlayerName = "Human"; }
 Human::Human(string Name) { PlayerName = Name; };
@@ -41,4 +40,4 @@ Move* Human::makeMove() {
 
 string Human::getName() { return PlayerName; }
 // Human::~Human() { delete moveName; }
-//Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
+// Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
