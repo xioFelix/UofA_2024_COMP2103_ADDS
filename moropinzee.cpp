@@ -65,6 +65,7 @@ Move* moropinzee::Judge(Move* compared) {
   } else {
     return nullptr;
   }
+    return nullptr;
 }
 // moropinzee::~moropinzee() {}
 // Work with Yige Jin(a1837312) & KaiQi Lin(a1810130)
