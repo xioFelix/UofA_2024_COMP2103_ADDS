@@ -50,13 +50,13 @@ void moropinzee::setMove(std::string RPMoveName) {
 
 Move* moropinzee::Judge(Move* compared) {
   string temp = NameOfMove;
-  if (4 > id > compared->getid()) {
+  if (4 > id && id > compared->getid()) {
     if ((id - compared->getid()) - (int)(id - compared->getid()) == 0) {
       return new moropinzee(temp);
     } else if ((id - compared->getid()) - (int)(id - compared->getid()) != 0) {
       return compared;
     }
-  } else if (4 > compared->getid() > id) {
+  } else if (4 > compared->getid() && compared->getid() > id) {
     if ((compared->getid() - id) - (int)(compared->getid() - id) == 0) {
       return new moropinzee(temp);
     } else if ((compared->getid() - id) - (int)(compared->getid() - id) != 0) {
