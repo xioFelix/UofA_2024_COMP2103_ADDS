@@ -47,24 +47,18 @@ Move* rps::Judge(Move* compared) {
       return new rps(temp);
     } else if (compared->getid() == 6) {
       return compared;
-    } else {
-    return nullptr;
     }
   } else if (id == 5) {
     if (compared->getid() == 4) {
       return compared;
     } else if (compared->getid() == 6) {
       return new rps(temp);
-    } else {
-    return nullptr;
     }
   } else if (id == 6) {
     if (compared->getid() == 5) {
       return compared;
     } else if (compared->getid() == 4) {
       return new rps(temp);
-    } else {
-    return nullptr;
     }
   } else {
     return nullptr;
