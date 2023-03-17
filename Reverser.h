@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Reverse {
+class Reverser {
  public:
   int reverseDigit(int value);
   string reverseString(string letters);

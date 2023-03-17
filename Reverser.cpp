@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int Reverse::reverseDigit(int value) {
+int Reverser::reverseDigit(int value) {
   if (value < 0) {
     return -1;
   }
@@ -21,7 +21,7 @@ int Reverse::reverseDigit(int value) {
   return value % 10 * (int)pow(10, len - 1) + reverseDigit(value / 10);
 }
 
-string Reverse::reverseString(string letters) {
+string Reverser::reverseString(string letters) {
   size_t sizeOfChar = letters.size();
   if (letters.size() == 1) {
     return letters;
