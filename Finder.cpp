@@ -13,11 +13,12 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
     } else {
       result.push_back(-1);
     }
+    if (i < s2.size()) {
+      substr.replace(0, 1, 1, s2[i]);
+    }
   }
   return result;
 }
-
-
 
 // #include "Finder.h"
 
