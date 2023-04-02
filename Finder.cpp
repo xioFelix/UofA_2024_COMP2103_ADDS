@@ -18,3 +18,5 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
   }
   return result;
 }
+
+// Collaboration with Yige Jin (a1837312)
