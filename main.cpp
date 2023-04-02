@@ -6,8 +6,8 @@ using namespace std;
 int main() {
   Finder finder;
 
-  string s1 = "hello world";
-  string s2 = "he";
+  string s1 = "734658732465";
+  string s2 = "463";
 
   vector<int> result = finder.findSubstrings(s1, s2);
 
