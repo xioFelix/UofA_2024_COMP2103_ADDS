@@ -36,4 +36,5 @@ int main() {
   for (unsigned int i = 0; i < input.size(); i++) {
     cout << " " << input.at(i);
   }
+  cout<<""<<endl;
 }
