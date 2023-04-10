@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "f:/Code/Adelaide Uni/2023/s1/ADDS2103/Wk6_Prac5",
-      "program": "f:/Code/Adelaide Uni/2023/s1/ADDS2103/Wk6_Prac5/build/Debug/outDebug",
+      "externalConsole": false,
+      "cwd": "/Users/felix/Documents/Adelaide Uni/2023/S1/ADDS2103/Wk6_Prac5",
+      "program": "/Users/felix/Documents/Adelaide Uni/2023/S1/ADDS2103/Wk6_Prac5/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
