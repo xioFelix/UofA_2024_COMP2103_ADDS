@@ -14,7 +14,7 @@ RecursiveBinarySearch::RecursiveBinarySearch() {}
 bool RecursiveBinarySearch::search(std::vector<int> data, int key, int lower,
                                    int upper) {
   if (lower > upper) {
-    return -1;  // Boundary case, if lower is ever greater than upper we have
+    return -1;
   }
 
   int midpoint = (lower + upper) / 2;
