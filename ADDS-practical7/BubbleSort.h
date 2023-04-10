@@ -10,4 +10,4 @@ class BubbleSort : public Sort {
   void sort(std::vector<int> &list);
   ~BubbleSort();
 };
-#endif  // BUBBLESORT_H
+#endif
