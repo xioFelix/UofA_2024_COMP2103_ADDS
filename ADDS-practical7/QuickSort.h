@@ -1,18 +1,17 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
-#include "Sort.h"
-#include <vector>
 #include <iostream>
+#include <vector>
 
-class QuickSort: public Sort
-{
-    public:
-        QuickSort();
-        void sort(std::vector<int> &list, int, int);
-        ~QuickSort();
+#include "Sort.h"
 
-    private:
-        int Split(std::vector<int> &list, int, int, int);
+class QuickSort : public Sort {
+ public:
+  QuickSort();
+  void sort(std::vector<int> &list, int, int);
+  ~QuickSort();
 
+ private:
+  int Split(std::vector<int> &list, int, int, int);
 };
 #endif

@@ -4,16 +4,14 @@
 
 using namespace std;
 
-class RecursiveBinarySearch
-{
-    public:
-        RecursiveBinarySearch();
-        bool search(std::vector<int>, int, int, int);
-        ~RecursiveBinarySearch();
+class RecursiveBinarySearch {
+ public:
+  RecursiveBinarySearch();
+  bool search(std::vector<int>, int, int, int);
+  ~RecursiveBinarySearch();
 
-    private:
-        int start;
-        int end;
-
+ private:
+  int start;
+  int end;
 };
 #endif
