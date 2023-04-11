@@ -28,9 +28,9 @@ int main() {
   RecursiveBinarySearch mybin;
   int found = mybin.search(input, 0, 0, input.size() - 1);
   if (found >= 0) {
-    cout << "false";
-  } else {
     cout << "true";
+  } else {
+    cout << "false";
   }
 
   for (unsigned int i = 0; i < input.size(); i++) {
