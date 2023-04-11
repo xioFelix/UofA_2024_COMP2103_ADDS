@@ -2,16 +2,9 @@
 #define RECURSIVEBINARYSEARCH_H
 #include <vector>
 
-using namespace std;
-
 class RecursiveBinarySearch {
  public:
-  RecursiveBinarySearch();
-  bool search(std::vector<int>, int, int, int);
-  ~RecursiveBinarySearch();
-
- private:
-  int start;
-  int end;
+  bool search(std::vector<int> sortlist, int element);
+  bool binarySearch(std::vector<int> sortlist, int element, int start, int end);
 };
 #endif

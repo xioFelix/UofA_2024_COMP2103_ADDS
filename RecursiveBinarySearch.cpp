@@ -1,35 +1,23 @@
 #include "RecursiveBinarySearch.h"
 
-#include <cstdlib>
-#include <iostream>
-#include <list>
-#include <sstream>
-#include <string>
 #include <vector>
 
-using namespace std;
-
-RecursiveBinarySearch::RecursiveBinarySearch() {}
-
-bool RecursiveBinarySearch::search(std::vector<int> data, int key, int lower,
-                                   int upper) {
-  if (lower > upper) {
-    return -1;
-  }
-
-  int midpoint = (lower + upper) / 2;
-
-  if (data.at(midpoint) > key) {
-    return search(
-        data, key, lower,
-        midpoint - 1);  // Call binary search on the 'left' side of the vector
-  } else if (data.at(midpoint) < key) {
-    return search(
-        data, key, midpoint + 1,
-        upper);  // Call binary search on the 'righ' side of the vector
-  } else {
-    return midpoint;
-  }
+bool RecursiveBinarySearch::search(std::vector<int> sortlist, int element) {
+  return binarySearch(sortlist, element, 0, sortlist.size() - 1);
 }
 
-RecursiveBinarySearch::~RecursiveBinarySearch() {}
+bool RecursiveBinarySearch::binarySearch(std::vector<int> sortlist, int element,
+                                         int start, int end) {
+  if (start > end) {
+    return false;
+  }
+  int mid = start + (end - start) / 2;
+  if (sortlist[mid] == element) {
+    return true;
+  } else if (sortlist[mid] < element) {
+    return binarySearch(sortlist, element, mid + 1, end);
+  } else if (sortlist[mid] > element) {
+    return binarySearch(sortlist, element, start, mid - 1);
+  }
+  return true;
+}

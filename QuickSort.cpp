@@ -1,35 +1,33 @@
 #include "QuickSort.h"
 
-#include <vector>
-using namespace std;
-
-QuickSort::QuickSort() {}
-
-void QuickSort::sort(vector<int> &list, int lower, int upper) {
-  if (lower < upper) {
-    int pivot_index = (lower + upper) / 2;
-    int new_pivot = Split(list, lower, upper, pivot_index);
-    sort(list, lower, new_pivot - 1);
-    sort(list, new_pivot + 1, upper);
+std::vector<int> QuickSort::sort(std::vector<int> sortlist) {
+  int n = sortlist.size();
+  if (n <= 1) {
+    return sortlist;
   }
-}
+  int pivot;
+  if (n == 2) {
+    pivot = sortlist[0];
+  } else {
+    pivot = sortlist[2];
+  }
 
-int QuickSort::Split(vector<int> &list, int lower, int upper, int pivot_index) {
-  int new_pivot = lower;
-  int pivot_value = list.at(pivot_index);
-
-  swap(list.at(pivot_index), list.at(upper));
-
-  for (int i = lower; i <= upper - 1; i++) {
-    if (list.at(i) <= pivot_value) {
-      swap(list.at(i), list.at(new_pivot));
-      new_pivot++;
+  std::vector<int> left, right, equal;
+  for (int i : sortlist) {
+    if (i < pivot) {
+      left.push_back(i);
+    } else if (i > pivot) {
+      right.push_back(i);
+    } else {
+      equal.push_back(i);
     }
   }
 
-  swap(list.at(new_pivot), list.at(upper));
+  std::vector<int> sorted_left = sort(left);
+  std::vector<int> sorted_right = sort(right);
+  sorted_left.insert(sorted_left.end(), equal.begin(), equal.end());
+  sorted_left.insert(sorted_left.end(), sorted_right.begin(),
+                     sorted_right.end());
 
-  return new_pivot;
+  return sorted_left;
 }
-
-QuickSort::~QuickSort() {}
