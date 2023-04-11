@@ -25,8 +25,8 @@ int main() {
   QuickSort myq;
   myq.sort(input, 0, input.size() - 1);
 
-  RecursiveBinarySearch mybin;
-  int found = mybin.search(input, 0, 0, input.size() - 1);
+  RecursiveBinarySearch begin;
+  int found = begin.search(input, 0, 0, input.size() - 1);
   if (found >= 0) {
     cout << "true";
   } else {
