@@ -5,21 +5,21 @@
 
 #include "QuickSort.h"
 
-std::vector<int> QuickSort::sort(std::vector<int> list) {
+std::vector<int> QuickSort::sort(std::vector<int> sortlist) {
   // set key value
-  int n = list.size();
+  int n = sortlist.size();
   if (n <= 1) {
-    return list;
+    return sortlist;
   }
   int pivot;
   if (n == 2) {
-    pivot = list[0];
+    pivot = sortlist[0];
   } else {
-    pivot = list[2];  // keep choosing the third value
+    pivot = sortlist[2];  // keep choosing the third value
   }
 
   std::vector<int> left, right, equal;
-  for (int i : list) {  // i=list[i]
+  for (int i : sortlist) {  // i=sortlist[i]
     if (i < pivot) {
       left.push_back(i);
     } else if (i > pivot) {
