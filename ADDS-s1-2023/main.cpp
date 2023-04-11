@@ -22,10 +22,8 @@ int main() {
   QuickSort qs;
   RecursiveBinarySearch rbs;
 
-  std::vector<int> new_list = qs.sort(list);  // quick sort (return list)
-
-  // search 1 and print true or false and the list
-  bool found = rbs.search(new_list, 1);  // binary search (return bool)
+  std::vector<int> new_list = qs.sort(list);
+  bool found = rbs.search(new_list, 1);
   std::cout << (found ? "true" : "false") << " ";
 
   for (int i : new_list) {

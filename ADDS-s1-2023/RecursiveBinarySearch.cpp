@@ -1,29 +1,23 @@
-// Check the middle element in the array.
-// 1. find this element -> return the index
-// 2. less than the middle element -> check the left
-// 3. more than the middle element -> check the right
-// repeate
-
 #include "RecursiveBinarySearch.h"
 
 #include <vector>
 
-bool RecursiveBinarySearch::search(std::vector<int> list, int element) {
-  return binarySearch(list, element, 0, list.size() - 1);
+bool RecursiveBinarySearch::search(std::vector<int> sortlist, int element) {
+  return binarySearch(sortlist, element, 0, sortlist.size() - 1);
 }
 
-bool RecursiveBinarySearch::binarySearch(std::vector<int> list, int element,
+bool RecursiveBinarySearch::binarySearch(std::vector<int> sortlist, int element,
                                          int start, int end) {
   if (start > end) {
     return false;
   }
   int mid = start + (end - start) / 2;
-  if (list[mid] == element) {
+  if (sortlist[mid] == element) {
     return true;
-  } else if (list[mid] < element) {
-    return binarySearch(list, element, mid + 1, end);
-  } else if (list[mid] > element) {
-    return binarySearch(list, element, start, mid - 1);
+  } else if (sortlist[mid] < element) {
+    return binarySearch(sortlist, element, mid + 1, end);
+  } else if (sortlist[mid] > element) {
+    return binarySearch(sortlist, element, start, mid - 1);
   }
   return true;
 }
