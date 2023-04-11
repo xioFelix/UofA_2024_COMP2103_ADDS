@@ -3,8 +3,8 @@
 #include <vector>
 
 class RecursiveBinarySearch {
-public:
-    bool search(std::vector<int> list, int element);
-    bool binarySearch(std::vector<int> list, int element, int start, int end);
+ public:
+  bool search(std::vector<int> list, int element);
+  bool binarySearch(std::vector<int> list, int element, int start, int end);
 };
 #endif

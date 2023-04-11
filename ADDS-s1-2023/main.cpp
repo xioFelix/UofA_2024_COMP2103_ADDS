@@ -1,36 +1,36 @@
-#include "Sort.h"
+#include <iostream>
+#include <sstream>
+#include <vector>
+
 #include "BubbleSort.h"
 #include "QuickSort.h"
 #include "RecursiveBinarySearch.h"
-
-#include <iostream>
-#include <vector>
-#include <sstream>
+#include "Sort.h"
 
 int main() {
-    std::string input;
-    std::getline(std::cin, input);
+  std::string input;
+  std::getline(std::cin, input);
 
-    std::vector<int> list;
-    std::istringstream iss(input);
+  std::vector<int> list;
+  std::istringstream iss(input);
 
-    int num;
-    while (iss >> num) {
-        list.push_back(num);
-    }
+  int num;
+  while (iss >> num) {
+    list.push_back(num);
+  }
 
-    QuickSort qs;
-    RecursiveBinarySearch rbs;
-    
-    std::vector<int> new_list=qs.sort(list); // quick sort (return list)
+  QuickSort qs;
+  RecursiveBinarySearch rbs;
 
-    // search 1 and print true or false and the list
-    bool found = rbs.search(new_list, 1); // binary search (return bool)
-    std::cout << (found ? "true" : "false") << " ";
+  std::vector<int> new_list = qs.sort(list);  // quick sort (return list)
 
-    for (int i : new_list) {
-        std::cout << i << " ";
-    }
+  // search 1 and print true or false and the list
+  bool found = rbs.search(new_list, 1);  // binary search (return bool)
+  std::cout << (found ? "true" : "false") << " ";
 
-    return 0;
+  for (int i : new_list) {
+    std::cout << i << " ";
+  }
+
+  return 0;
 }
