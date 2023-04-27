@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Finder.h"
-#include "Finder.cpp"
 using namespace std;
 
 int main() {
