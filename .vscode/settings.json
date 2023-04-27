@@ -36,5 +36,6 @@
   "C_Cpp_Runner.useAddressSanitizer": false,
   "files.associations": {
     "string": "cpp"
-  }
+  },
+  "C_Cpp_Runner.showCompilationTime": false
 }
