@@ -33,9 +33,9 @@ void LinkedList::addEnd(int newItem) {
   }
 }
 
-void LinkedList::insertPosition(int pos, int newItem) {
+void LinkedList::insertPosition(int pos, int newNum) {
   if (pos < 1 || !start) {
-    addFront(newItem);
+    addFront(newNum);
     return;
   }
 
@@ -44,7 +44,7 @@ void LinkedList::insertPosition(int pos, int newItem) {
   Node* pre = start;
   while (current) {
     if (pos == index + 1) {
-      Node* temp = new Node(newItem);
+      Node* temp = new Node(newNum);
       pre->setNext(temp);
       temp->setNext(current);
       return;
@@ -53,7 +53,7 @@ void LinkedList::insertPosition(int pos, int newItem) {
     current = current->getNext();
     pre = pre->getNext();
   }
-  addEnd(newItem);
+  addEnd(newNum);
 }
 
 int LinkedList::search(int target) {
@@ -105,7 +105,7 @@ void LinkedList::deleteEnd() {
   }
 }
 
-void LinkedList::deletePosition(int position) {
+void LinkedList::deletePosition(int pos) {
   if (!start) {
     return;
   }
@@ -113,7 +113,7 @@ void LinkedList::deletePosition(int position) {
   Node* pre = start;
   Node* curr = start->getNext();
   while (curr) {
-    if (position == index + 1) {
+    if (pos == index + 1) {
       Node* next = curr->getNext();
       pre->setNext(next);
     }
@@ -122,19 +122,19 @@ void LinkedList::deletePosition(int position) {
     index++;
   }
 
-  if (position < 1 || position > index) {
+  if (pos < 1 || pos > index) {
     cout << "outside range" << endl;
   }
 }
 
-int LinkedList::get(int position) {
+int LinkedList::get(int pos) {
   int index = 1;
 
   if (start) {
     Node* a = start;
     Node* curr = a;
     while (curr) {
-      if (index == position) {
+      if (index == pos) {
         cout << curr->getValue() << " ";
         return index;
       }
@@ -142,7 +142,7 @@ int LinkedList::get(int position) {
       index++;
     }
 
-    if (position > index || position < 1) {
+    if (pos > index || pos < 1) {
       cout << numeric_limits<int>::max() << " ";
       return numeric_limits<int>::max();
     }
