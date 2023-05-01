@@ -30,9 +30,9 @@ int main(int argc, char** argv) {
   } else if (input == "D") {
     list->deletePosition(end.at(0));
   } else if (input == "G") {
-    list->getItem(end.at(0));
+    list->get(end.at(0));
   }
-  list->printItems();
+  list->printList();
 
   return 0;
 }

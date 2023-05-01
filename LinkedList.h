@@ -14,8 +14,8 @@ class LinkedList {
   void deleteFront();
   void deleteEnd();
   void deletePosition(int position);
-  int getItem(int position);
-  void printItems();
+  int get(int position);
+  void printList();
 
   LinkedList();
   LinkedList(std::vector<int>);

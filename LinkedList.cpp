@@ -127,7 +127,7 @@ void LinkedList::deletePosition(int position) {
   }
 }
 
-int LinkedList::getItem(int position) {
+int LinkedList::get(int position) {
   int index = 1;
 
   if (start) {
@@ -150,7 +150,7 @@ int LinkedList::getItem(int position) {
   return 0;
 }
 
-void LinkedList::printItems() {
+void LinkedList::printList() {
   if (start) {
     cout << start->getValue() << " ";
     Node* current = start;
