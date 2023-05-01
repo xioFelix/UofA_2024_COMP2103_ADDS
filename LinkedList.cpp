@@ -105,7 +105,7 @@ int LinkedList::get(int pos) {
     Node* curr = a;
     while (curr) {
       if (index == pos) {
-        cout << curr->getValue() << " ";
+        cout << curr->getValue() << "1 ";
         return index;
       }
       curr = curr->getNext();
@@ -113,7 +113,7 @@ int LinkedList::get(int pos) {
     }
 
     if (pos > index || pos < 1) {
-      cout << numeric_limits<int>::max() << " ";
+      cout << numeric_limits<int>::max() << "2 ";
       return numeric_limits<int>::max();
     }
   }
