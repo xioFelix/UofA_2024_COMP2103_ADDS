@@ -16,6 +16,6 @@ class Node
 
  protected:
   int data;
-  Node* next;
+  Node* text;
 };
 #endif

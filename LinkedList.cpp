@@ -113,8 +113,8 @@ bool LinkedList::deletePosition(int pos) {
   Node* curr = start->getNext();
   while (curr) {
     if (pos == index + 1) {
-      Node* next = curr->getNext();
-      pre->setNext(next);
+      Node* text = curr->getNext();
+      pre->setNext(text);
     }
     curr = curr->getNext();
     pre = pre->getNext();

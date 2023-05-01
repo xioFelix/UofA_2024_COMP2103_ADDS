@@ -3,7 +3,7 @@
 Node::Node(int val)
 {
     data = val;
-    next = nullptr;
+    text = nullptr;
 }
 
 void Node::setValue(int val)
@@ -18,12 +18,12 @@ int Node::getValue()
 
 void Node::setNext(Node* nextnode)
 {
-    next = nextnode;
+    text = nextnode;
 }
 
 Node* Node::getNext()
 {
-    return next;
+    return text;
 }
 
 Node::~Node()
