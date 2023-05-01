@@ -88,6 +88,7 @@ bool LinkedList::deletePosition(int pos) {
     if (pos == index + 1) {
       Node* text = curr->getNext();
       pre->setNext(text);
+      return true;
     }
     curr = curr->getNext();
     pre = pre->getNext();
@@ -95,7 +96,7 @@ bool LinkedList::deletePosition(int pos) {
   }
 
   if (pos < 1 || pos > index) {
-    cout << "outside range" << endl;
+    return false;
   }
 }
 
