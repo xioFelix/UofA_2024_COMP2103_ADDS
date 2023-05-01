@@ -18,7 +18,7 @@ class LinkedList {
   void printList();
 
   LinkedList();
-  LinkedList(std::vector<int>);
+  LinkedList(int* array, int len);
   virtual ~LinkedList();
 
  private:

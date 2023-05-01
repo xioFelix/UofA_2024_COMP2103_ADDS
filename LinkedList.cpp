@@ -6,11 +6,10 @@ using namespace std;
 
 LinkedList::LinkedList() { start = NULL; }
 
-LinkedList::LinkedList(vector<int> vec) {
+LinkedList::LinkedList(int* array, int len) {
   start = NULL;
-  int length = vec.size();
-  for (int i = 0; i < length; i++) {
-    addEnd(vec.at(i));
+  for (int i = 0; i < len; i++) {
+    addEnd(array[i]);
   }
 }
 
