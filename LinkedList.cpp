@@ -109,11 +109,11 @@ int LinkedList::get(int pos) {
         cout << curr->getValue();
       }
       curr = curr->getNext();
-      index++;
+      ++index;
       cout << "Index= " << index << " pos= " << pos << "\n";
     }
 
-    if (pos > index || pos < 1) {
+    if (pos < index || pos < 1) {
       cout<<"Out of Range";
       return numeric_limits<int>::max();
     }
