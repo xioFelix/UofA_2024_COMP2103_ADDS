@@ -77,33 +77,6 @@ int LinkedList::search(int target) {
   return 0;
 }
 
-void LinkedList::deleteFront() {
-  if (head) {
-    if (head->getNext()) {
-      Node* newstart = head->getNext();
-      head = newstart;
-    } else {
-      head = NULL;
-    }
-  }
-}
-
-void LinkedList::deleteEnd() {
-  if (head) {
-    if (head->getNext()) {
-      Node* current = head->getNext();
-      Node* pre = head;
-      while (current->getNext()) {
-        current = current->getNext();
-        pre = pre->getNext();
-      }
-      pre->setNext(NULL);
-    } else {
-      head = NULL;
-    }
-  }
-}
-
 bool LinkedList::deletePosition(int pos) {
   if (!head) {
     return false;
