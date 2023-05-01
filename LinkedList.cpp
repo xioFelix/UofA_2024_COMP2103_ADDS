@@ -106,20 +106,15 @@ int LinkedList::get(int pos) {
     while (curr) {
       if (index == pos) {
         // cout<<"Index= "<<index<<" pos= "<<pos<<"\n";
-        cout << curr->getValue()<<"in while loop";
+        cout << curr->getValue();
         break;
       }
       curr = curr->getNext();
       index++;
-      cout << "Index= " << index << " pos= " << pos << "\n";
+      // cout << "Index= " << index << " pos= " << pos << "\n";
     }
 
-if(pos<1){
-      cout << "In pos<1 situation"<<endl; 
-      return false;
-}
-
-    if (pos > index) {
+    if (pos > index || pos < 1) {
       // cout<<"Out of Range";
       return numeric_limits<int>::max();
     }
