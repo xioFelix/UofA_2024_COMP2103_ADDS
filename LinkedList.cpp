@@ -106,14 +106,12 @@ int LinkedList::get(int pos) {
     while (curr) {
       if (index == pos) {
         cout << curr->getValue();
-        index++;
       }
       curr = curr->getNext();
-
+      index++;
     }
 
     if (pos > index || pos < 1) {
-      cout << numeric_limits<int>::max() << " ";
       return numeric_limits<int>::max();
     }
   }
