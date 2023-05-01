@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
   list = new LinkedList(v);
 
   if (input == "I") {
-    list->addAtPosition(end.at(0), end.at(1));
+    list->insertPosition(end.at(0), end.at(1));
   } else if (input == "S") {
     list->search(end.at(0));
   } else if (input == "D") {

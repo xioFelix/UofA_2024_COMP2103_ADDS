@@ -33,7 +33,7 @@ void LinkedList::addEnd(int newItem) {
   }
 }
 
-void LinkedList::addAtPosition(int pos, int newItem) {
+void LinkedList::insertPosition(int pos, int newItem) {
   if (pos < 1 || !start) {
     addFront(newItem);
     return;

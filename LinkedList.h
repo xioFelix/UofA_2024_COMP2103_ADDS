@@ -9,7 +9,7 @@ class LinkedList {
  public:
   void addFront(int newItem);
   void addEnd(int newItem);
-  void addAtPosition(int position, int newItem);
+  void insertPosition(int position, int newItem);
   int search(int item);
   void deleteFront();
   void deleteEnd();
