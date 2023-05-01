@@ -124,11 +124,18 @@ void LinkedList::printList() {
   if (head) {
     cout << "[" << head->getValue() << " ";
     Node* current = head;
+    bool last = false;
     while (current->getNext()) {
       current = current->getNext();
-      cout << current->getValue() << " ";
+      if (current->getNext() == nullptr) {
+        last = true;
+      }
+      cout << current->getValue();
+      if (!last) {
+        cout << " ";
+      }
     }
-    cout << current->getValue() << "]" << endl;
+    cout << "]" << endl;
   }
 }
 
