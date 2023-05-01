@@ -78,9 +78,6 @@ int LinkedList::search(int target) {
 }
 
 bool LinkedList::deletePosition(int pos) {
-  if (!head) {
-    return false;
-  }
   int index = 1;
   Node* pre = head;
   Node* curr = head->getNext();
