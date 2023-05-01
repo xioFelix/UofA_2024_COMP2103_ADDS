@@ -1,13 +1,16 @@
 #include "LinkedList.h"
 
+#include <iostream>
 #include <limits>
+
+#include "Node.h"
 
 using namespace std;
 
-LinkedList::LinkedList() { head = NULL; }
+LinkedList::LinkedList() { head = nullptr; }
 
 LinkedList::LinkedList(int* array, int len) {
-  head = NULL;
+  head = nullptr;
   for (int i = 0; i < len; i++) {
     addEnd(array[i]);
   }
@@ -57,8 +60,7 @@ void LinkedList::insertPosition(int pos, int newNum) {
 
 int LinkedList::search(int target) {
   if (!head) {
-    cout << "0";
-    return 0;
+    return -1;
   }
 
   Node* current = head;
@@ -66,25 +68,35 @@ int LinkedList::search(int target) {
   while (current) {
     int val = current->getValue();
     if (val == target) {
-      cout << pos << " ";
       return pos;
     } else {
       pos++;
     }
     current = current->getNext();
   }
-  cout << "0";
-  return 0;
+  return -1;
 }
 
 bool LinkedList::deletePosition(int pos) {
+  if (!head) {
+    return false;
+  }
+
+  if (pos == 1) {
+    Node* temp = head;
+    head = head->getNext();
+    delete temp;
+    return true;
+  }
+
   int index = 1;
   Node* pre = head;
   Node* curr = head->getNext();
   while (curr) {
     if (pos == index + 1) {
-      Node* text = curr->getNext();
-      pre->setNext(text);
+      Node* temp = curr;
+      pre->setNext(curr->getNext());
+      delete temp;
       return true;
     }
     curr = curr->getNext();
@@ -92,34 +104,25 @@ bool LinkedList::deletePosition(int pos) {
     index++;
   }
 
-  if (pos < 1 || pos > index) {
-    return false;
-  }
+  return false;
 }
 
 int LinkedList::get(int pos) {
-  int index = 1;
-
-  if (head) {
-    Node* a = head;
-    Node* curr = a;
-    while (curr) {
-      if (index == pos) {
-        // cout<<"Index= "<<index<<" pos= "<<pos<<"\n";
-        cout << curr->getValue();
-        break;
-      }
-      curr = curr->getNext();
-      index++;
-      // cout << "Index= " << index << " pos= " << pos << "\n";
-    }
-
-    if (pos > index || pos < 1) {
-      // cout<<"Out of Range";
-      return numeric_limits<int>::max();
-    }
+  if (!head) {
+    return numeric_limits<int>::max();
   }
-  return 0;
+
+  int index = 1;
+  Node* curr = head;
+  while (curr) {
+    if (index == pos) {
+      return curr->getValue();
+    }
+    curr = curr->getNext();
+    index++;
+  }
+
+  return numeric_limits<int>::max();
 }
 
 void LinkedList::printList() {
