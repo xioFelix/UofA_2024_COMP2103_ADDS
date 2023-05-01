@@ -128,6 +128,7 @@ void LinkedList::printList() {
       current = current->getNext();
       cout << current->getValue() << " ";
     }
+    cout<<"]";
   }
 }
 
