@@ -105,16 +105,16 @@ int LinkedList::get(int pos) {
     Node* curr = a;
     while (curr) {
       if (index == pos) {
-        cout<<"Index= "<<index<<" pos= "<<pos<<"\n";
+        // cout<<"Index= "<<index<<" pos= "<<pos<<"\n";
         cout << curr->getValue();
       }
       curr = curr->getNext();
       ++index;
-      cout << "Index= " << index << " pos= " << pos << "\n";
+      // cout << "Index= " << index << " pos= " << pos << "\n";
     }
 
     if (pos < index || pos < 1) {
-      cout<<"Out of Range";
+      // cout<<"Out of Range";
       return numeric_limits<int>::max();
     }
   }
