@@ -10,11 +10,11 @@ class LinkedList {
   void addFront(int newItem);
   void addEnd(int newItem);
   void insertPosition(int position, int newItem);
-  int search(int item);
+  int search(int target);
   void deleteFront();
   void deleteEnd();
-  void deletePosition(int position);
-  int get(int position);
+  bool deletePosition(int pos);
+  int get(int pos);
   void printList();
 
   LinkedList();
@@ -22,6 +22,6 @@ class LinkedList {
   virtual ~LinkedList();
 
  private:
-  Node *start;
+  Node* start;
 };
 #endif

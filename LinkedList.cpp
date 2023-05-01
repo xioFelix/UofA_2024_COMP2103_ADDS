@@ -104,9 +104,9 @@ void LinkedList::deleteEnd() {
   }
 }
 
-void LinkedList::deletePosition(int pos) {
+bool LinkedList::deletePosition(int pos) {
   if (!start) {
-    return;
+    return false;
   }
   int index = 1;
   Node* pre = start;
