@@ -107,6 +107,7 @@ int LinkedList::get(int pos) {
       if (index == pos) {
         // cout<<"Index= "<<index<<" pos= "<<pos<<"\n";
         cout << curr->getValue();
+        break;
       }
       curr = curr->getNext();
       index++;
