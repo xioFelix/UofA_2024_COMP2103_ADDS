@@ -1,5 +1,7 @@
 #include "BigNumCalc.h"
 
+#include <algorithm>
+
 std::list<int> BigNumCalc::buildBigNum(std::string numString) {
   std::list<int> result;
   result.resize(numString.size());
