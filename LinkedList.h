@@ -11,8 +11,6 @@ class LinkedList {
   void addEnd(int newNum);
   void insertPosition(int pos, int newNum);
   int search(int target);
-  void deleteFront();
-  void deleteEnd();
   bool deletePosition(int pos);
   int get(int pos);
   void printList();
