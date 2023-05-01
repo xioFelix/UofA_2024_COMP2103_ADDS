@@ -106,9 +106,10 @@ int LinkedList::get(int pos) {
     while (curr) {
       if (index == pos) {
         cout << curr->getValue();
+        index++;
       }
       curr = curr->getNext();
-      index++;
+
     }
 
     if (pos > index || pos < 1) {
