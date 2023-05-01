@@ -4,10 +4,10 @@
 
 using namespace std;
 
-LinkedList::LinkedList() { start = NULL; }
+LinkedList::LinkedList() { head = NULL; }
 
 LinkedList::LinkedList(int* array, int len) {
-  start = NULL;
+  head = NULL;
   for (int i = 0; i < len; i++) {
     addEnd(array[i]);
   }
@@ -15,14 +15,14 @@ LinkedList::LinkedList(int* array, int len) {
 
 void LinkedList::addFront(int newItem) {
   Node* temp = new Node(newItem);
-  temp->setNext(start);
-  start = temp;
+  temp->setNext(head);
+  head = temp;
 }
 
 void LinkedList::addEnd(int newItem) {
-  if (start) {
+  if (head) {
     Node* temp = new Node(newItem);
-    Node* pre = start;
+    Node* pre = head;
     while (pre->getNext()) {
       pre = pre->getNext();
     }
@@ -33,14 +33,14 @@ void LinkedList::addEnd(int newItem) {
 }
 
 void LinkedList::insertPosition(int pos, int newNum) {
-  if (pos < 1 || !start) {
+  if (pos < 1 || !head) {
     addFront(newNum);
     return;
   }
 
   int index = 1;
-  Node* current = start->getNext();
-  Node* pre = start;
+  Node* current = head->getNext();
+  Node* pre = head;
   while (current) {
     if (pos == index + 1) {
       Node* temp = new Node(newNum);
@@ -56,12 +56,12 @@ void LinkedList::insertPosition(int pos, int newNum) {
 }
 
 int LinkedList::search(int target) {
-  if (!start) {
+  if (!head) {
     cout << "0";
     return 0;
   }
 
-  Node* current = start;
+  Node* current = head;
   int pos = 1;
   while (current) {
     int val = current->getValue();
@@ -78,39 +78,39 @@ int LinkedList::search(int target) {
 }
 
 void LinkedList::deleteFront() {
-  if (start) {
-    if (start->getNext()) {
-      Node* newstart = start->getNext();
-      start = newstart;
+  if (head) {
+    if (head->getNext()) {
+      Node* newstart = head->getNext();
+      head = newstart;
     } else {
-      start = NULL;
+      head = NULL;
     }
   }
 }
 
 void LinkedList::deleteEnd() {
-  if (start) {
-    if (start->getNext()) {
-      Node* current = start->getNext();
-      Node* pre = start;
+  if (head) {
+    if (head->getNext()) {
+      Node* current = head->getNext();
+      Node* pre = head;
       while (current->getNext()) {
         current = current->getNext();
         pre = pre->getNext();
       }
       pre->setNext(NULL);
     } else {
-      start = NULL;
+      head = NULL;
     }
   }
 }
 
 bool LinkedList::deletePosition(int pos) {
-  if (!start) {
+  if (!head) {
     return false;
   }
   int index = 1;
-  Node* pre = start;
-  Node* curr = start->getNext();
+  Node* pre = head;
+  Node* curr = head->getNext();
   while (curr) {
     if (pos == index + 1) {
       Node* text = curr->getNext();
@@ -129,8 +129,8 @@ bool LinkedList::deletePosition(int pos) {
 int LinkedList::get(int pos) {
   int index = 1;
 
-  if (start) {
-    Node* a = start;
+  if (head) {
+    Node* a = head;
     Node* curr = a;
     while (curr) {
       if (index == pos) {
@@ -150,9 +150,9 @@ int LinkedList::get(int pos) {
 }
 
 void LinkedList::printList() {
-  if (start) {
-    cout << start->getValue() << " ";
-    Node* current = start;
+  if (head) {
+    cout << head->getValue() << " ";
+    Node* current = head;
     while (current->getNext()) {
       current = current->getNext();
       cout << current->getValue() << " ";

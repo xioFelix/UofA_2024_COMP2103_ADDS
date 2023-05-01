@@ -22,6 +22,6 @@ class LinkedList {
   virtual ~LinkedList();
 
  private:
-  Node* start;
+  Node* head;
 };
 #endif
