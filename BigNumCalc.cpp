@@ -2,9 +2,9 @@
 
 std::list<int> BigNumCalc::buildBigNum(std::string numString) {
   std::list<int> result;
-  for (char c : numString) {
-    result.push_back(c - '0');
-  }
+  result.resize(numString.size());
+  std::transform(numString.rbegin(), numString.rend(), result.begin(),
+                 [](char c) { return c - '0'; });
   return result;
 }
 
@@ -56,14 +56,20 @@ std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
 
 std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
   std::list<int> result;
-  int carry = 0;
+  result.resize(num1.size() + num2.size());
+  std::fill(result.begin(), result.end(), 0);
+  auto rit = result.rbegin();
   for (int digit : num1) {
-    int prod = digit * num2.front() + carry;
-    carry = prod / 10;
-    result.push_back(prod % 10);
-  }
-  if (carry > 0) {
-    result.push_back(carry);
+    int carry = 0;
+    for (auto it = num2.rbegin(); it != num2.rend(); ++it, ++rit) {
+      int prod = digit * (*it) + carry + (*rit);
+      *rit = prod % 10;
+      carry = prod / 10;
+    }
+    if (carry > 0) {
+      *rit += carry;
+    }
+    ++rit;
   }
   while (result.size() > 1 && result.front() == 0) {
     result.pop_front();
