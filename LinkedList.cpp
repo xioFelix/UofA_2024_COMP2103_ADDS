@@ -33,7 +33,6 @@ void LinkedList::addEnd(int newItem) {
 }
 
 void LinkedList::insertPosition(int pos, int newNum) {
-  pos=pos+1;
   if (pos < 1 || !start) {
     addFront(newNum);
     return;
