@@ -122,7 +122,7 @@ int LinkedList::get(int pos) {
 
 void LinkedList::printList() {
   if (head) {
-    cout << head->getValue() << " ";
+    cout<<"["<< head->getValue() << " ";
     Node* current = head;
     while (current->getNext()) {
       current = current->getNext();
