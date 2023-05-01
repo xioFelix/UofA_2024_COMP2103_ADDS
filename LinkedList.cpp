@@ -56,7 +56,7 @@ void LinkedList::insertPosition(int pos, int newItem) {
   addEnd(newItem);
 }
 
-int LinkedList::search(int item) {
+int LinkedList::search(int target) {
   if (!start) {
     cout << "0";
     return 0;
@@ -66,7 +66,7 @@ int LinkedList::search(int item) {
   int pos = 1;
   while (current) {
     int val = current->getValue();
-    if (val == item) {
+    if (val == target) {
       cout << pos << " ";
       return pos;
     } else {
