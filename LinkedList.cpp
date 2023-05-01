@@ -115,7 +115,8 @@ int LinkedList::get(int pos) {
     }
 
 if(pos<1){
-  return false;
+      cout << "In pos<1 situation"<<endl; 
+      return false;
 }
 
     if (pos > index) {
