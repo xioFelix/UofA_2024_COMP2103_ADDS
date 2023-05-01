@@ -9,7 +9,7 @@ class LinkedList {
  public:
   void addFront(int newItem);
   void addEnd(int newItem);
-  void insertPosition(int position, int newItem);
+  void insertPosition(int pos, int newItem);
   int search(int target);
   void deleteFront();
   void deleteEnd();
@@ -19,7 +19,7 @@ class LinkedList {
 
   LinkedList();
   LinkedList(int* array, int len);
-  virtual ~LinkedList();
+  ~LinkedList();
 
  private:
   Node* head;
