@@ -110,7 +110,7 @@ int LinkedList::get(int pos) {
       }
       curr = curr->getNext();
       index++;
-      // cout << "Index= " << index << " pos= " << pos << "\n";
+      cout << "Index= " << index << " pos= " << pos << "\n";
     }
 
 if(pos<1){
