@@ -1,11 +1,10 @@
 #include "BigNumCalc.h"
 
-#include <algorithm>
-
 std::list<int> BigNumCalc::buildBigNum(std::string numString) {
-  std::list<int> result(numString.size(), 0);
-  std::transform(numString.rbegin(), numString.rend(), result.begin(),
-                 [](char c) { return c - '0'; });
+  std::list<int> result;
+  for (char c : numString) {
+    result.push_back(c - '0');
+  }
   return result;
 }
 
