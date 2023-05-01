@@ -113,7 +113,7 @@ int LinkedList::get(int pos) {
       // cout << "Index= " << index << " pos= " << pos << "\n";
     }
 
-    if (pos < index || pos < 1) {
+    if (pos < 1 || pos > index) {
       // cout<<"Out of Range";
       return numeric_limits<int>::max();
     }
