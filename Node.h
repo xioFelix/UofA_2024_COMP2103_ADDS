@@ -14,8 +14,8 @@ class Node
 
   ~Node();
 
- protected:
+ private:
   int data;
-  Node* text;
+  Node* link;
 };
 #endif
