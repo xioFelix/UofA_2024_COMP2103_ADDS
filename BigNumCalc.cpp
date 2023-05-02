@@ -73,7 +73,7 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
     while (partialResult.front() == 0 && partialResult.size() > 1) {
       partialResult.pop_front();
     }
-    for (int i = 0; i < num1.size(); i++) {
+    for (size_t i = 0; i < num1.size(); i++) {
       partialResult.push_back(0);
     }
     result = add(result, partialResult);
