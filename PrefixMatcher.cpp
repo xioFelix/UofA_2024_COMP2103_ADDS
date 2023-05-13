@@ -25,7 +25,7 @@ size_t PrefixMatcher::selectRouter(const std::string& networkAddress) {
   return selectedRouter;
 }
 
-void PrefixMatcher::insert(const std::string& address, size_t routerNumber) {
+void PrefixMatcher::insert(const std::string& address, int routerNumber) {
   BinaryTrieNode* current = root;
   for (char ch : address) {
     size_t index = ch - '0';
