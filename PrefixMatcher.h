@@ -7,7 +7,7 @@
 class BinaryTrieNode {
  public:
   BinaryTrieNode* children[2];
-  int routerNumber;
+  size_t routerNumber;
 
   BinaryTrieNode();
 };
@@ -16,8 +16,8 @@ class PrefixMatcher {
  public:
   PrefixMatcher();
 
-  int selectRouter(const std::string& networkAddress);
-  void insert(const std::string& address, int routerNumber);
+  size_t selectRouter(const std::string& networkAddress);
+  void insert(const std::string& address, size_t routerNumber);
 
  private:
   BinaryTrieNode* root;
