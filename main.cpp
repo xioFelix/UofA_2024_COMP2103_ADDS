@@ -4,33 +4,30 @@
 #include "PrefixMatcher.h"
 
 int main() {
-  // Test Autocomplete
   Autocomplete autocomplete;
   autocomplete.insert("bin");
   autocomplete.insert("ball");
   autocomplete.insert("ballet");
 
-  std::cout << "Autocomplete suggestions for 'b':\n";
-  auto suggestions = autocomplete.getSuggestions("b");
-  for (const auto& suggestion : suggestions) {
-    std::cout << suggestion << "\n";
+  std::vector<std::string> results;
+
+  results = autocomplete.getSuggestions("b");
+  for (size_t i = 0; i < results.size(); i++) {
+    std::cout << results[i] << std::endl;
   }
 
-  std::cout << "\nAutocomplete suggestions for 'bal':\n";
-  suggestions = autocomplete.getSuggestions("bal");
-  for (const auto& suggestion : suggestions) {
-    std::cout << suggestion << "\n";
+  results = autocomplete.getSuggestions("bal");
+  for (size_t i = 0; i < results.size(); i++) {
+    std::cout << results[i] << std::endl;
   }
 
-  // Test PrefixMatcher
   PrefixMatcher prefixMatcher;
   prefixMatcher.insert("110011011101", 1);
   prefixMatcher.insert("110011011", 2);
   prefixMatcher.insert("11001101", 3);
 
-  std::cout << "\nBest matching router for '11001101110': ";
   int router = prefixMatcher.selectRouter("11001101110");
-  std::cout << router << "\n";
+  std::cout << router << std::endl;
 
   return 0;
 }
