@@ -2,7 +2,7 @@
 
 TrieNode::TrieNode() {
   isEndOfWord = false;
-  for (int i = 0; i < 26; ++i) {
+  for (size_t i = 0; i < 26; ++i) {
     children[i] = nullptr;
   }
 }
@@ -14,7 +14,7 @@ std::vector<std::string> Autocomplete::getSuggestions(
   std::vector<std::string> suggestions;
   TrieNode* current = root;
   for (char ch : partialWord) {
-    int index = ch - 'a';
+    size_t index = ch - 'a';
     if (current->children[index] == nullptr) {
       return suggestions;
     }
@@ -27,7 +27,7 @@ std::vector<std::string> Autocomplete::getSuggestions(
 void Autocomplete::insert(const std::string& word) {
   TrieNode* current = root;
   for (char ch : word) {
-    int index = ch - 'a';
+    size_t index = ch - 'a';
     if (current->children[index] == nullptr) {
       current->children[index] = new TrieNode();
     }
@@ -42,7 +42,7 @@ void Autocomplete::getSuggestionsHelper(TrieNode* node,
   if (node->isEndOfWord) {
     suggestions.push_back(currentPrefix);
   }
-  for (int i = 0; i < 26; ++i) {
+  for (size_t i = 0; i < 26; ++i) {
     if (node->children[i] != nullptr) {
       getSuggestionsHelper(node->children[i], currentPrefix + char(i + 'a'),
                            suggestions);
