@@ -7,7 +7,7 @@
 class BinaryTrieNode {
  public:
   BinaryTrieNode* children[2];
-  int routerNumber;
+  int routerNumber=-1;
 
   BinaryTrieNode();
 };
