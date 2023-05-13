@@ -8,12 +8,12 @@ BinaryTrieNode::BinaryTrieNode() {
 
 PrefixMatcher::PrefixMatcher() { root = new BinaryTrieNode(); }
 
-int PrefixMatcher::selectRouter(const std::string& networkAddress) {
+size_t PrefixMatcher::selectRouter(const std::string& networkAddress) {
   BinaryTrieNode* current = root;
-  int selectedRouter = -1;
+  size_t selectedRouter = -1;
 
   for (char ch : networkAddress) {
-    int index = ch - '0';
+    size_t index = ch - '0';
     if (current->children[index] == nullptr) {
       break;
     }
@@ -25,10 +25,10 @@ int PrefixMatcher::selectRouter(const std::string& networkAddress) {
   return selectedRouter;
 }
 
-void PrefixMatcher::insert(const std::string& address, int routerNumber) {
+void PrefixMatcher::insert(const std::string& address, size_t routerNumber) {
   BinaryTrieNode* current = root;
   for (char ch : address) {
-    int index = ch - '0';
+    size_t index = ch - '0';
     if (current->children[index] == nullptr) {
       current->children[index] = new BinaryTrieNode();
     }
