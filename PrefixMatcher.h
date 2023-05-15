@@ -16,8 +16,8 @@ class PrefixMatcher {
  public:
   PrefixMatcher();
 
-  size_t selectRouter(std::string& networkAddress);
-  void insert(std::string& address, int routerNumber);
+  size_t selectRouter(const std::string& networkAddress);
+  void insert(const std::string& address, int routerNumber);
 
  private:
   BinaryTrieNode* root;
