@@ -16,8 +16,8 @@ class Autocomplete {
  public:
   Autocomplete();
 
-  std::vector<std::string> getSuggestions(std::string& partialWord);
-  void insert(std::string& word);
+  std::vector<std::string> getSuggestions(const std::string& partialWord);
+  void insert(const std::string& word);
 
  private:
   TrieNode* root;
