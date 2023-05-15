@@ -10,7 +10,7 @@ TrieNode::TrieNode() {
 Autocomplete::Autocomplete() { root = new TrieNode(); }
 
 std::vector<std::string> Autocomplete::getSuggestions(
-    const std::string& partialWord) {
+    std::string& partialWord) {
   std::vector<std::string> suggestions;
   TrieNode* current = root;
   for (char ch : partialWord) {
