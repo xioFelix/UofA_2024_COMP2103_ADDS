@@ -36,5 +36,6 @@
   "C_Cpp_Runner.useAddressSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "gitdoc.autoCommitDelay": 10000,
-  "gitdoc.autoPullDelay": 10000
+  "gitdoc.autoPullDelay": 10000,
+  "gitdoc.timeZone": "Australia/Adelaide"
 }
