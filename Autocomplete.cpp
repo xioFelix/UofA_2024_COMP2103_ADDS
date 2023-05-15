@@ -24,7 +24,7 @@ std::vector<std::string> Autocomplete::getSuggestions(
   return suggestions;
 }
 
-void Autocomplete::insert(const std::string& word) {
+void Autocomplete::insert(std::string& word) {
   TrieNode* current = root;
   for (char ch : word) {
     size_t index = ch - 'a';
