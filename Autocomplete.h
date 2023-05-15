@@ -16,7 +16,7 @@ class Autocomplete {
  public:
   Autocomplete();
 
-  std::vector<std::string> getSuggestions(const std::string& partialWord);
+  std::vector<std::string> getSuggestions(std::string& partialWord);
   void insert(std::string& word);
 
  private:
