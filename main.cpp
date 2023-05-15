@@ -26,8 +26,14 @@ int main() {
   prefixMatcher.insert("110011011", 2);
   prefixMatcher.insert("11001101", 3);
 
-  int router = prefixMatcher.selectRouter("11001101110");
-  std::cout << router << std::endl;
+  size_t router = prefixMatcher.selectRouter("11001101110");
+  std::cout << "11001101110: " << router << std::endl;
+  router = prefixMatcher.selectRouter("110011011");
+  std::cout << "110011011: " << router << std::endl;
+  router = prefixMatcher.selectRouter("11001101");
+  std::cout << "11001101: " << router << std::endl;
+  router = prefixMatcher.selectRouter("1100110");
+  std::cout << "1100110: " << router << std::endl;
 
   return 0;
 }

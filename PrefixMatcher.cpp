@@ -33,6 +33,6 @@ void PrefixMatcher::insert(const std::string& address, int routerNumber) {
       current->children[index] = new BinaryTrieNode();
     }
     current = current->children[index];
+    current->routerNumber = routerNumber;
   }
-  current->routerNumber = routerNumber;
 }
